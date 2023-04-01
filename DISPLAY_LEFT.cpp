@@ -2,7 +2,7 @@
 
 int DISPLAY_LEFT(int matrix[][COL], int DISPLAY_LEFT , int LOWER_BOUND)//will need to call hidden matrix
 {
-    int LOWER_BOUND = matrix[0][0];
+    DISPLAY_LEFT = LOWER_BOUND;
     for(int i = 0; i < ROW ; ++i ){
         for(int j = 0 ; j < COL ; ++j){
             if(LOWER_BOUND > matrix[i][j]){
