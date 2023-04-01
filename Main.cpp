@@ -10,8 +10,11 @@ int main()
     std::string USER_NAME;
     int visible[ROW][COL];
     int hidden[ROW][COL];
-    genShowMatrix(visible);
-    genHideMatrix(hidden, 1, 10);
+    int LOWER_BOUND;
+    int UPPER_BOUND;
+    int LOWER_HIDDEN;
+    int UPPER_HIDDEN;
+    initialize(LOWER_BOUND , UPPER_BOUND , LOWER_HIDDEN , UPPER_HIDDEN , hidden , visible);
     
     USER_NAME = GET_NAME(USER_NAME);
     std::cout << USER_NAME << "\n";
