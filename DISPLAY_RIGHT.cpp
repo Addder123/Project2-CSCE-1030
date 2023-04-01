@@ -2,14 +2,10 @@
 
 int DISPLAY_RIGHT(int matrix[][COL], int DISPLAY_RIGHT , int UPPER_BOUND)//will need to call hidden matrix
 {
-    int UPPER_BOUND = matrix[0][0];
-    for(int i = 0; i < ROW ; ++i ){
-        for(int j = 0 ; j < COL ; ++j){
-            if(UPPER_BOUND < matrix[i][j]){
-                UPPER_BOUND = matrix[i][j];
-            }
-        }
-    }
-    DISPLAY_RIGHT = UPPER_BOUND;
+  if(DISPLAY_RIGHT == -1){
+   DISPLAY_RIGHT = UPPER_BOUND; 
+  }
+    else{
+        std::cout << "You can't do that cheater!\n";
     return DISPLAY_RIGHT;
 }
