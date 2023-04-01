@@ -3,11 +3,13 @@
 #include <string.h>
 #include <time.h>
 using namespace std;
+const int ROW = 5;
+const int COl = 5;
 int main()
 {
     std::string USER_NAME;
-    int visible[10][10];
-    int hidden[10][10];
+    int visible[ROW][COL];
+    int hidden[ROW][COL];
     genShowMatrix(visible);
     genHideMatrix(hidden, 1, 10);
     
