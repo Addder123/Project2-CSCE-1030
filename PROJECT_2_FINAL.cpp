@@ -12,7 +12,7 @@ enum selection{disLeft = 1 , disRight , GUESS , cheat , change , leave };
 selection CHOICE;
 
 
-std::string GET_NAME(std::string USER_NAME)
+std::string GET_NAME(std::string& USER_NAME)
 {
     int ALPHA = 1;
 
@@ -160,6 +160,7 @@ void guess(int VISIBLE_MATRIX[][COL] , int HIDDEN_MATRIX[][COL] , int SHOW_LEFT 
     int guess;
     int ELIM_ROW;
     int ELIM_COL;
+    int POINT_MOD;
     bool CHECK = false;
     std::cout << "Please enter a number: ";
     std::cin >> guess; 
@@ -173,12 +174,14 @@ for(int i = 0 ; i < ROW ; ++i){
                 ELIM_COL = j;
                 eliminate(VISIBLE_MATRIX , HIDDEN_MATRIX , ELIM_ROW , ELIM_COL);
                 if(SHOW_LEFT == -1 && SHOW_RIGHT == -1){
-                    LIFE_POINTS += 5;
+                    POINT_MOD = 5;
+                    LIFE_POINTS += POINT_MOD;
                 }
                 else{
-                    LIFE_POINTS +=1;
+                    POINT_MOD = 1;
+                    LIFE_POINTS += POINT_MOD;
                 }
-                std::cout << "You earn " << LIFE_POINTS << " points\n";
+                std::cout << "You earn " << POINT_MOD << " points\n";
                 CHECK = true;
             }
         }
@@ -186,11 +189,14 @@ for(int i = 0 ; i < ROW ; ++i){
     if(CHECK == false){
         
         if(SHOW_LEFT == -1 && SHOW_RIGHT == -1){
-            LIFE_POINTS -= 5;
+            POINT_MOD = 5;
+            LIFE_POINTS -= POINT_MOD;
+
         }else{
-            LIFE_POINTS -= 10;
+            POINT_MOD = 10;
+            LIFE_POINTS -= POINT_MOD;
         }
-        std::cout << "Sorry that was not the right answer you lose " << LIFE_POINTS << ".\n";
+        std::cout << "Sorry that was not the right answer you lose " << POINT_MOD << " Life points.\n";
     }
 
 }
