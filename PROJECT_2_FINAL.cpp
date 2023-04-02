@@ -242,7 +242,7 @@ int main(){
         
         std::cout << "+_____________________________________________________________+\n";
         std::cout << " Lower bound: " << LOWER_HIDDEN << "\t Upper bound: " << UPPER_HIDDEN << "\n";
-        std::cout << "you have " << LIFE_POINTS << "life points\n What would you like to do?\n";
+        std::cout << "you have " << LIFE_POINTS << " life points\n What would you like to do?\n";
         std::cout << " 1. Display Left \n 2. Display Right \n 3. Guess \n 4. Cheat (dev tool) \n 5. Change \n 6. Exit \n";
         std::cin >> CHOICE;
         std::cout << "+_____________________________________________________________+\n\n\n";
