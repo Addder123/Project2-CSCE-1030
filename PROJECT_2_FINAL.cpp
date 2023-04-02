@@ -168,7 +168,7 @@ void guess(int VISIBLE_MATRIX[][COL] , int HIDDEN_MATRIX[][COL] , int SHOW_LEFT 
 
 for(int i = 0 ; i < ROW ; ++i){
         for(int j = 0 ; j < COL ; ++j){
-            if(HIDDEN_MATRIX[i][j] == guess){
+            if(HIDDEN_MATRIX[i][j] == guess && guess != 0){
                 std::cout << "Good job! " << guess << " was correct!\n"; 
                 ELIM_ROW = i;
                 ELIM_COL = j;
